@@ -34,6 +34,11 @@ EXPOSE 8080
 EXPOSE 4443
 
 # Expose default database credentials via ENV in order to ease overwriting.
+ENV DB_TYPE pgsql
+ENV DB_HOST DB
+ENV DB_PORT 5432
+ENV DB_SUPER_USER postgres
+ENV DB_SUPER_PASS postgres
 ENV DB_NAME ttrss
 ENV DB_USER ttrss
 ENV DB_PASS ttrss
