@@ -42,6 +42,7 @@ ENV DB_SUPER_PASS postgres
 ENV DB_NAME ttrss
 ENV DB_USER ttrss
 ENV DB_PASS ttrss
+ENV TTRSS_UPDATER_WAIT_TIME 24h
 
 # Clean up.
 RUN set -xe && apk del --progress --purge && rm -rf /var/cache/apk/*
