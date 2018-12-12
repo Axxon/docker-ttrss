@@ -9,16 +9,16 @@ services:
       DB_TYPE: pgsql
       DB_HOST: postgres
       DB_PORT: 5432
-      DB_NAME: tinytinyrss
-      DB_USER: tinytinyrss
-      DB_PASS: tinytinyrss
+      DB_NAME: ttrss
+      DB_USER: ttrss
+      DB_PASS: ttrss
       DB_ENV_USER: postgres
       DB_ENV_PASS: postgres
-      TTRSS_SELF_URL: http://localhost:8080
-      TTRSS_WITH_SELFSIGNED_CERT: 0
+      TTRSS_SELF_URL: https://localhost
+      TTRSS_WITH_SELFSIGNED_CERT: 1
     restart: unless-stopped
     ports:
-      - 8080:8080
+      - 443:4443
     networks:
       - intern
 
