@@ -4,7 +4,7 @@ services:
   main:
     build: .
     links:
-      - postgres:postgres
+      - postgres
     environment:
       DB_TYPE: pgsql
       DB_HOST: postgres
