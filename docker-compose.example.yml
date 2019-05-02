@@ -23,7 +23,7 @@ services:
       - intern
 
   postgres:
-    image: postgres:9.3
+    image: postgres:11
     volumes:
       - ./test/postgresql/data:/var/lib/postgresql/data
     restart: unless-stopped
