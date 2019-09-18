@@ -65,6 +65,7 @@ setup_ttrss()
         fi
         git clone --depth=1 https://github.com/sepich/tt-rss-mobilize.git ${TTRSS_PATH}/plugins/mobilize
         git clone --depth=1 https://github.com/m42e/ttrss_plugin-feediron.git ${TTRSS_PATH}/plugins/feediron
+        git clone --depth=1 https://github.com/hkockerbeck/ttrss-tumblr-gdpr-ua.git ${TTRSS_PATH}/plugins/tumblr_gdpr_ua
         git clone --depth=1 https://github.com/levito/tt-rss-feedly-theme.git ${TTRSS_PATH}/themes/feedly-git
     fi
 

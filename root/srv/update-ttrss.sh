@@ -38,6 +38,12 @@ update_theme_feedly()
     ln -f -s ${TTRSS_PATH}/themes/feedly-git/feedly.css ${TTRSS_PATH}/themes/feedly.css
 }
 
+update_theme_tumblr_gdpr_ua()
+{
+    echo "Updating: ttrss-tumblr-gdpr-ua"
+    ( cd ${TTRSS_PATH}/plugins/tumblr_gdpr_ua && git pull origin HEAD )
+}
+
 update_common()
 {
     if [ -z "$MY_ROOT_UID" ]; then
@@ -61,6 +67,7 @@ update_ttrss
 update_plugin_mobilize
 update_plugin_feediron
 update_theme_feedly
+update_theme_tumblr_gdpr_ua
 update_common
 
 echo "Update: Done"
