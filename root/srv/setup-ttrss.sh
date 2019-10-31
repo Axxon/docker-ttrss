@@ -10,6 +10,8 @@ setup_nginx()
 
     if [ ! -z "$HTTP_BASIC_AUTH_USER" ]; then
         if [ ! -z "$HTTP_BASIC_AUTH_PW" ]; then
+            echo "Setup: Found http basic auth user + pw; enabling http basic auth in nginx ..."
+            htpasswd -bc /etc/nginx/.htpasswd "$HTTP_BASIC_AUTH_USER" "$HTTP_BASIC_AUTH_PW"
             sed -i -e "s/#auth_basic/auth_basic/g" ${NGINX_CONF}
             sed -i -e "s/#auth_basic_user_file/auth_basic_user_file/g" ${NGINX_CONF}
         fi

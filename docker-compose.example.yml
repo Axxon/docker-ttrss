@@ -16,6 +16,8 @@ services:
       DB_ENV_PASS: postgres
       TTRSS_SELF_URL: https://localhost
       TTRSS_WITH_SELFSIGNED_CERT: 1
+      HTTP_BASIC_AUTH_USER: foo
+      HTTP_BASIC_AUTH_PW: bar
     restart: unless-stopped
     ports:
       - 443:4443
