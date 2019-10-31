@@ -8,6 +8,13 @@ setup_nginx()
 
     NGINX_CONF=/etc/nginx/nginx.conf
 
+    if [ ! -z "$HTTP_BASIC_AUTH_USER" ]; then
+        if [ ! -z "$HTTP_BASIC_AUTH_PW" ]; then
+            sed -i -e "s/#auth_basic/auth_basic/g" ${NGINX_CONF}
+            sed -i -e "s/#auth_basic_user_file/auth_basic_user_file/g" ${NGINX_CONF}
+        fi
+    fi
+
     if [ "$TTRSS_WITH_SELFSIGNED_CERT" = "1" ]; then
         # Install OpenSSL.
         apk update && apk add openssl

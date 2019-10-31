@@ -43,6 +43,8 @@ ENV DB_NAME ttrss
 ENV DB_USER ttrss
 ENV DB_PASS ttrss
 ENV TTRSS_UPDATER_WAIT_TIME 24h
+ENV HTTP_BASIC_AUTH_USER ''
+ENV HTTP_BASIC_AUTH_PW ''
 
 # Clean up.
 RUN set -xe && apk del --progress --purge && rm -rf /var/cache/apk/*
